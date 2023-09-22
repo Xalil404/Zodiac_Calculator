@@ -44,9 +44,9 @@ Name=input("Enter Your Name:")
 print ("Hello",str(Name))
 print("This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
 
-d = int(input("Enter Day ::>"))
-m = int(input("Enter the Month ::>"))
-y = int(input("Enter the Year ::>"))
+d = int(input("Enter Day (1 through 31) ::>"))
+m = int(input("Enter the Month (1 through 12) ::>"))
+y = int(input("Enter the Year (From 1924 & onwards) ::>"))
 
 def zodiac_sign(day, month):
    if month == 12:
