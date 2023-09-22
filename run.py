@@ -135,24 +135,30 @@ if zodiac:
 
     print(f"Hey {Name}, your zodiac sign is {zodiac}. Your qualties are {qualities_western}. Your horoscope is:\n{horoscope_western}")
 
-    mayan_choice = input("Would you like to receive your Mayan Zodiac sign & horoscope? (y/n)").lower()
+    while True:
 
-    if mayan_choice == 'y' or mayan_choice == 'yes':
-        # mayan logic
-        zodiac_mayan = zodiac_sign_mayan(d, m)
+        mayan_choice = input("Would you like to receive your Mayan Zodiac sign & horoscope? (y/n)").lower()
 
-        zodiac_df_mayan = df_mayan[df_mayan["Zodiac Sign"] == zodiac_mayan]
-        qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
-        horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
+        if mayan_choice == 'y' or mayan_choice == 'yes':
+            # mayan logic
+            zodiac_mayan = zodiac_sign_mayan(d, m)
 
-        print(f"{Name}, your Mayan zodiac sign is {zodiac_mayan}. Your qualties are {qualities_mayan}. Your Mayan horoscope is:\n{horoscope_mayan}")
+            zodiac_df_mayan = df_mayan[df_mayan["Zodiac Sign"] == zodiac_mayan]
+            qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
+            horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
 
+            print(f"{Name}, your Mayan zodiac sign is {zodiac_mayan}. Your qualties are {qualities_mayan}. Your Mayan horoscope is:\n{horoscope_mayan}")
 
+            break
+        
+        elif mayan_choice == 'n' or mayan_choice == "no":
 
+            #restart the program
+            break
 
-    else:
-        # restart the program
-        pass
+        else:
+            print("Only Y or N or yes or no are accepted. Please try again!")
+            continue
 
 
 
