@@ -94,7 +94,7 @@ while main_loop:
 
     
     print (
-        """\033[0m 1;37;40m 
+        """\033[0m
         
                     .___.     .            
                       _/  _  _|* _. _.     
@@ -108,10 +108,9 @@ while main_loop:
         """
     )
 
-
+    print("Welcome to Zodiac Calculator!\n\nThis Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.\n\nEnter your name & date of birth below to get started!\n\n")
     Name=input("Enter Your Name:")
     print ("Hello",str(Name))
-    print("This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
 
     d = int(input("Enter Day (1 through 31) ::>"))
     m = int(input("Enter the Month (1 through 12) ::>"))
