@@ -94,7 +94,7 @@ while main_loop:
 
     
     print (
-        """\033[1;37;40m 
+        """\033[1;37;40m
         
 .___.     .                
   _/  _  _|* _. _.         
@@ -105,17 +105,17 @@ while main_loop:
 \__.(_]|(_.(_||(_] | (_)[  
                            
 
-        """
+        \033[0m"""
     )
 
 
-    Name=input("\033[1;37;40m Enter Your Name:")
-    print ("\033[1;37;40m Hello",str(Name))
-    print("\033[1;37;40m This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
+    Name=input("Enter Your Name:")
+    print ("Hello",str(Name))
+    print("This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
 
-    d = int(input("\033[1;37;40m Enter Day (1 through 31) ::>"))
-    m = int(input("\033[1;37;40m Enter the Month (1 through 12) ::>"))
-    y = int(input("\033[1;37;40m Enter the Year (From 1924 & onwards) ::>"))
+    d = int(input("Enter Day (1 through 31) ::>"))
+    m = int(input("Enter the Month (1 through 12) ::>"))
+    y = int(input("Enter the Year (From 1924 & onwards) ::>"))
 
 
 
