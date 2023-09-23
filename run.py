@@ -2,6 +2,8 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
 
+
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -43,7 +45,7 @@ def zodiac_sign(day, month):
    elif month == 11:
       astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
    else:
-        print("Only Months 1 through 12 & days 1 through 31 are accepted")
+        print("\033[1;31;40m WARNING: Only Months 1 through 12, days 1 through 31 & Years after 1924 are accepted")
         return None
    return astro_sign
 
@@ -92,7 +94,7 @@ while main_loop:
 
     
     print (
-        """
+        """\033[1;32;40m
 
 ____    __    ____  __    __       ___   .___________.__     _______.
 \   \  /  \  /   / |  |  |  |     /   \  |           (_ )   /       |
@@ -120,13 +122,13 @@ ____    ____  ______    __    __  .______
     )
 
 
-    Name=input("Enter Your Name:")
-    print ("Hello",str(Name))
-    print("This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
+    Name=input("\033[1;37;40m Enter Your Name:")
+    print ("\033[1;37;40m Hello",str(Name))
+    print("\033[1;37;40m This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.")
 
-    d = int(input("Enter Day (1 through 31) ::>"))
-    m = int(input("Enter the Month (1 through 12) ::>"))
-    y = int(input("Enter the Year (From 1924 & onwards) ::>"))
+    d = int(input("\033[1;37;40m Enter Day (1 through 31) ::>"))
+    m = int(input("\033[1;37;40m Enter the Month (1 through 12) ::>"))
+    y = int(input("\033[1;37;40m Enter the Year (From 1924 & onwards) ::>"))
 
 
 
@@ -150,9 +152,9 @@ ____    ____  ______    __    __  .______
         qualities_western = zodiac_df_western["Qualities"].values[0]
         horoscope_western = zodiac_df_western["Horoscope"].values[0]
         
-        print(f"Hey {Name}, your zodiac sign is: {zodiac}.\n\n")
-        print(f"Your qualties are: {qualities_western}.\n\n")
-        print(f"Your horoscope is: {horoscope_western}\n\n")
+        print(f"\033[1;32;40m Hey {Name}, your zodiac sign is: {zodiac}.\n\n")
+        print(f"\033[1;32;40m Your qualties are: {qualities_western}.\n\n")
+        print(f"\033[1;32;40m Your horoscope is: {horoscope_western}\n\n")
 
         while True:
 
@@ -166,9 +168,9 @@ ____    ____  ______    __    __  .______
                 qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
                 horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
 
-                print(f"{Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
-                print(f"Your qualties are: {qualities_mayan}.\n\n")
-                print(f"Your Mayan horoscope is: {horoscope_mayan}.\n\n")
+                print(f"\033[1;32;40m {Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
+                print(f"\033[1;32;40m Your qualties are: {qualities_mayan}.\n\n")
+                print(f"\033[1;32;40m Your Mayan horoscope is: {horoscope_mayan}.\n\n")
 
                 while True:
 
@@ -182,9 +184,9 @@ ____    ____  ______    __    __  .______
                         qualities_chinese = zodiac_df_chinese["Qualities"]
                         horoscope_chinese = zodiac_df_chinese["Horoscope"]
 
-                        print(f"{Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
-                        print(f"Your qualties are: {qualities_chinese}.\n\n")
-                        print(f"Your Chinese horoscope is: {horoscope_chinese}.\n\n")
+                        print(f"\033[1;32;40m {Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
+                        print(f"\033[1;32;40m Your qualties are: {qualities_chinese}.\n\n")
+                        print(f"\033[1;32;40m Your Chinese horoscope is: {horoscope_chinese}.\n\n")
 
                         while True:
 
@@ -194,7 +196,7 @@ ____    ____  ______    __    __  .______
                                 main_loop = True
                                 break
                             else:
-                                print("Only the word 'end' is accepted! Please try again")
+                                print("\033[1;31;40m WARNING: Only the word 'end' is accepted! Please try again")
                                 continue
 
                         break
@@ -202,7 +204,7 @@ ____    ____  ______    __    __  .______
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
-                        print("Only Y or N or yes or no are accepted. Please try again!")
+                        print("\033[1;31;40m WARNING: Only Y or N or yes or no are accepted. Please try again!")
                         continue
 
                 break
@@ -211,7 +213,7 @@ ____    ____  ______    __    __  .______
                 break
 
             else:
-                print("Only Y or N or yes or no are accepted. Please try again!")
+                print("\033[1;31;40m WARNING: Only Y or N or yes or no are accepted. Please try again!")
                 continue
 
 
