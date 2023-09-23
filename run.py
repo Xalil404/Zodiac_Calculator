@@ -150,7 +150,9 @@ ____    ____  ______    __    __  .______
         qualities_western = zodiac_df_western["Qualities"].values[0]
         horoscope_western = zodiac_df_western["Horoscope"].values[0]
         
-        print(f"Hey {Name}, your zodiac sign is {zodiac}. Your qualties are {qualities_western}. Your horoscope is:\n{horoscope_western}")
+        print(f"Hey {Name}, your zodiac sign is: {zodiac}.\n\n")
+        print(f"Your qualties are: {qualities_western}.\n\n")
+        print(f"Your horoscope is: {horoscope_western}\n\n")
 
         while True:
 
@@ -164,7 +166,9 @@ ____    ____  ______    __    __  .______
                 qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
                 horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
 
-                print(f"{Name}, your Mayan zodiac sign is {zodiac_mayan}. Your qualties are {qualities_mayan}. Your Mayan horoscope is:\n{horoscope_mayan}")
+                print(f"{Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
+                print(f"Your qualties are: {qualities_mayan}.\n\n")
+                print(f"Your Mayan horoscope is: {horoscope_mayan}.\n\n")
 
                 while True:
 
@@ -178,7 +182,9 @@ ____    ____  ______    __    __  .______
                         qualities_chinese = zodiac_df_chinese["Qualities"]
                         horoscope_chinese = zodiac_df_chinese["Horoscope"]
 
-                        print(f"{Name}, your Chinese zodiac sign is {zodiac_chinese}. Your qualties are {qualities_chinese}. Your Chinese horoscope is:\n{horoscope_chinese}")
+                        print(f"{Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
+                        print(f"Your qualties are: {qualities_chinese}.\n\n")
+                        print(f"Your Chinese horoscope is: {horoscope_chinese}.\n\n")
 
                         while True:
 
