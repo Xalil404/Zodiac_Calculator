@@ -45,7 +45,7 @@ def zodiac_sign(day, month):
    elif month == 11:
       astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
    else:
-        print("\033[1;31;40m WARNING: Only Months 1 through 12, days 1 through 31 & Years after 1924 are accepted")
+        print("\033[31mWARNING: Only Months 1 through 12, days 1 through 31 & Years after 1924 are accepted")
         return None
    return astro_sign
 
@@ -138,13 +138,13 @@ while main_loop:
         qualities_western = zodiac_df_western["Qualities"].values[0]
         horoscope_western = zodiac_df_western["Horoscope"].values[0]
         
-        print(f"\033[1;32;40m Hey {Name}, your zodiac sign is: {zodiac}.\n\n")
-        print(f"\033[1;32;40m Your qualties are: {qualities_western}.\n\n")
-        print(f"\033[1;32;40m Your horoscope is: {horoscope_western}\n\n")
+        print(f"\033[32mHey {Name}, your zodiac sign is: {zodiac}.\n\n")
+        print(f"\033[32mYour qualties are: {qualities_western}.\n\n")
+        print(f"\033[32mYour horoscope is: {horoscope_western}\n\n")
 
         while True:
 
-            mayan_choice = input("Would you like to receive your Mayan Zodiac sign & horoscope? (y/n)").lower()
+            mayan_choice = input("\033[33mWould you like to receive your Mayan Zodiac sign & horoscope? (y/n)").lower()
 
             if mayan_choice == 'y' or mayan_choice == 'yes':
                 # mayan logic
@@ -154,13 +154,13 @@ while main_loop:
                 qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
                 horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
 
-                print(f"\033[1;32;40m {Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
-                print(f"\033[1;32;40m Your qualties are: {qualities_mayan}.\n\n")
-                print(f"\033[1;32;40m Your Mayan horoscope is: {horoscope_mayan}.\n\n")
+                print(f"\033[32m{Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
+                print(f"\033[32mYour qualties are: {qualities_mayan}.\n\n")
+                print(f"\033[32mYour Mayan horoscope is: {horoscope_mayan}.\n\n")
 
                 while True:
 
-                    chinese_choice = input("Would you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
+                    chinese_choice = input("\033[33mWould you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
 
                     if chinese_choice == 'y' or chinese_choice == 'yes':
                         
@@ -170,19 +170,19 @@ while main_loop:
                         qualities_chinese = zodiac_df_chinese["Qualities"]
                         horoscope_chinese = zodiac_df_chinese["Horoscope"]
 
-                        print(f"\033[1;32;40m {Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
-                        print(f"\033[1;32;40m Your qualties are: {qualities_chinese}.\n\n")
-                        print(f"\033[1;32;40m Your Chinese horoscope is: {horoscope_chinese}.\n\n")
+                        print(f"\033[32m{Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
+                        print(f"\033[32mYour qualties are: {qualities_chinese}.\n\n")
+                        print(f"\033[32mYour Chinese horoscope is: {horoscope_chinese}.\n\n")
 
                         while True:
 
-                            continue_choice = input("Enter 'end' to end the program: ").lower()
+                            continue_choice = input("\033[33mEnter 'end' to end the program: ").lower()
 
                             if continue_choice == 'end':
                                 main_loop = True
                                 break
                             else:
-                                print("\033[1;31;40m WARNING: Only the word 'end' is accepted! Please try again")
+                                print("\033[31mWARNING: Only the word 'end' is accepted! Please try again")
                                 continue
 
                         break
@@ -190,7 +190,7 @@ while main_loop:
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
-                        print("\033[1;31;40m WARNING: Only Y or N or yes or no are accepted. Please try again!")
+                        print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
                         continue
 
                 break
@@ -199,7 +199,7 @@ while main_loop:
                 break
 
             else:
-                print("\033[1;31;40m WARNING: Only Y or N or yes or no are accepted. Please try again!")
+                print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
                 continue
 
 
