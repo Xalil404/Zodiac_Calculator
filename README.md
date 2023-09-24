@@ -65,3 +65,19 @@ I have manually tested the project through the following methods:
 
 * Tested the code via the Pep8 to make sure there are no problems. 
 
+## Deployment
+
+In order to deploy the project on Heroku, the following steps were taken:
+
+* Activate Dyno points in the billing section of the Heroku account settings.
+
+* In the Heroku dashboard create a new project and give it a name.
+
+* In the project settings add 2 config vars (key: Creds Value: Copy and paste the credentials from the creds.json file and a second configuration key: PORT with value: 8000).
+
+* Also in the project settings add two build packs (A python build pack and a node.js build pack).
+
+* Then go to the deploy tab of the project and connect the project's Github repo.
+
+* After the Github repo has been connected, select the manual deploy option which will deploy the project if no errors arise.  
+
