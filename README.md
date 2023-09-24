@@ -1,32 +1,13 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Zodiac Calculator
+The Zodiac calculator is a python terminal command line program which runs in the Code institute mock terminal on Heroku.
 
-Welcome,
+Upon the program initiating, the user is requested to enter their name and date of birth and based on the values provided, the program generates their astrological zodiac sign, qualities of the zodiac and the zodiac’s horoscope description based on three calendars: the western Gregorian calendar, the Mezo-American Mayan calendar and the Chinese calendar.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The data for the three astrological calendars was stored in a Google Sheet through the enablement of Google’s APIs for Gdrive and Google sheets and the relevant data was pulled from it and presented to the user based on the date of birth information that they provided.
+<p align="center">
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695550743/Project%201/Screenshot_2023-09-24_at_11.16.52_AM_kcwqfq.png" width="auto" height="auto" alt="image of the Zodiac calculator program start screen on all devices"></p>
 
-## Reminders
+## UML Diagram
+Prior to initiating the development, a UML diagram was created to understand the flow of the application, steps taken during the program from beginning to end and any possible edge case scenario’s which should produce the relevant error messages for the user to understand what they did wrong. 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695551348/Project%201/Screenshot_2023-09-23_at_11.03.26_AM_claegz.png" width="auto" height="auto" alt="image of the Zodiac calculator UML diagram">
