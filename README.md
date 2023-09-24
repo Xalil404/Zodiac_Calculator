@@ -81,3 +81,18 @@ In order to deploy the project on Heroku, the following steps were taken:
 
 * After the Github repo has been connected, select the manual deploy option which will deploy the project if no errors arise.  
 
+## Credits
+
+* Gregorian horoscope data was provided by [Allure](https://www.allure.com/story/zodiac-sign-personality-traits-dates).
+
+* Mayan horoscope data was provided by [AZULIK](https://www.newsroom.azulik.com/healing/discover-what-sign-of-the-mayan-horoscope-you-are/).
+
+* Chinese horoscope data was provided by [travel-china-guide](https://www.travelchinaguide.com/intro/social_customs/zodiac/).
+
+* Welcome banner ASCII text art provided by [Patorjik](https://patorjk.com/software/taag/#p=display&f=Bloody&t=Food%20Thing).
+
+* For code and syntax references: Code Academy python materials/lessons, Python documentation on the internet and the Love Sandwiches practice project.
+
+* Google APIs for Gdrive & Google sheets to communicate with the Google sheet document.
+
+* Many project tutorials on the web of similar projects.
