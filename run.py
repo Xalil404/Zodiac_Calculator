@@ -3,7 +3,6 @@ from google.oauth2.service_account import Credentials
 import pandas as pd
 
 
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -19,39 +18,40 @@ wks_western = SHEET.worksheet('western')
 wks_mayan = SHEET.worksheet('mayan')
 wks_chinese = SHEET.worksheet('chinese')
 
+
 def zodiac_sign(day, month):
-   if month == 12:
-      astro_sign = 'Sagittarius' if (day < 22) else 'Capricorn'
-   elif month == 1:
-      astro_sign = 'Capricorn' if (day < 20) else 'Aquarius'
-   elif month == 2:
-      astro_sign = 'Aquarius' if (day < 19) else 'Pisces'
-   elif month == 3:
-      astro_sign = 'Pisces' if (day < 21) else 'Aries'
-   elif month == 4:
-      astro_sign = 'Aries' if (day < 20) else 'Taurus'
-   elif month == 5:
-      astro_sign = 'Taurus' if (day < 21) else 'Gemini'
-   elif month == 6:
-      astro_sign = 'Gemini' if (day < 21) else 'Cancer'
-   elif month == 7:
-      astro_sign = 'Cancer' if (day < 23) else 'Leo'
-   elif month == 8:
-      astro_sign = 'Leo' if (day < 23) else 'Virgo'
-   elif month == 9:
-      astro_sign = 'Virgo' if (day < 23) else 'Libra'
-   elif month == 10:
-      astro_sign = 'Libra' if (day < 23) else 'Scorpio'
-   elif month == 11:
-      astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
-   else:
+    if month == 12:
+        astro_sign = 'Sagittarius' if (day < 22) else 'Capricorn'
+    elif month == 1:
+        astro_sign = 'Capricorn' if (day < 20) else 'Aquarius'
+    elif month == 2:
+        astro_sign = 'Aquarius' if (day < 19) else 'Pisces'
+    elif month == 3:
+        astro_sign = 'Pisces' if (day < 21) else 'Aries'
+    elif month == 4:
+        astro_sign = 'Aries' if (day < 20) else 'Taurus'
+    elif month == 5:
+        astro_sign = 'Taurus' if (day < 21) else 'Gemini'
+    elif month == 6:
+        astro_sign = 'Gemini' if (day < 21) else 'Cancer'
+    elif month == 7:
+        astro_sign = 'Cancer' if (day < 23) else 'Leo'
+    elif month == 8:
+        astro_sign = 'Leo' if (day < 23) else 'Virgo'
+    elif month == 9:
+        astro_sign = 'Virgo' if (day < 23) else 'Libra'
+    elif month == 10:
+        astro_sign = 'Libra' if (day < 23) else 'Scorpio'
+    elif month == 11:
+        astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
+    else:
         print("\033[31mWARNING: Only Months 1 through 12, days 1 through 31 & Years after 1924 are accepted")
         return None
-   return astro_sign
+    return astro_sign
 
 def zodiac_sign_mayan(day, month):
     if month == 12:
-      astro_sign = 'ALLIGATOR' if (day < 22) else 'FALCON'
+        astro_sign = 'ALLIGATOR' if (day < 22) else 'FALCON'
     elif month == 1:
         astro_sign = 'FALCON' if (day < 20) else 'JAGUAR'
     elif month == 2:
