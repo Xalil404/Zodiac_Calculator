@@ -76,7 +76,7 @@ def zodiac_sign_mayan(day, month):
     elif month == 11:
         astro_sign = 'PEACOCK' if (day < 22) else 'ALLIGATOR'
     else:
-        print("Error")    
+        print("Error")
     return astro_sign
 
 
@@ -91,16 +91,15 @@ def zodiac_sign_chinese(y):
 
 
 main_loop = True
-while main_loop:    
+while main_loop:
     print(
-        """\033[0m        
-                    .___.     .            
-                      _/  _  _|* _. _.     
-                    ./__.(_)(_]|(_](_.     
-                                           
-                 __    .      .    ,       
+        """\033[0m
+                    .___.     .
+                      _/  _  _|* _. _.
+                    ./__.(_)(_]|(_](_.                     
+                 __    .      .    ,
                 /  ` _.| _.. .| _.-+- _ ._.
-                \__.(_]|(_.(_||(_] | (_)[                                             
+                \__.(_]|(_.(_||(_] | (_)[
 
         """
     )
@@ -121,7 +120,7 @@ while main_loop:
 
     zodiac = zodiac_sign(d, m)
 
-    if zodiac:        
+    if zodiac:
 
         # Pandas Filtering
         zodiac_df_western = df_western[df_western["Zodiac Sign"] == zodiac]
@@ -152,7 +151,7 @@ while main_loop:
 
                     chinese_choice = input("\033[33mWould you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
 
-                    if chinese_choice == 'y' or chinese_choice == 'yes':        
+                    if chinese_choice == 'y' or chinese_choice == 'yes':
                         zodiac_df_chinese = df_chinese.iloc[zodiac_sign_chinese(y)]
 
                         zodiac_chinese = zodiac_df_chinese["Zodiac Sign"]
@@ -173,7 +172,7 @@ while main_loop:
                             else:
                                 print("\033[31mWARNING: Only the word 'end' is accepted! Please try again")
                                 continue
-                        break                    
+                        break
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
