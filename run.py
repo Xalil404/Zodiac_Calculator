@@ -49,6 +49,7 @@ def zodiac_sign(day, month):
         return None
     return astro_sign
 
+
 def zodiac_sign_mayan(day, month):
     if month == 12:
         astro_sign = 'ALLIGATOR' if (day < 22) else 'FALCON'
@@ -75,8 +76,7 @@ def zodiac_sign_mayan(day, month):
     elif month == 11:
         astro_sign = 'PEACOCK' if (day < 22) else 'ALLIGATOR'
     else:
-        print("Error")
-    
+        print("Error")    
     return astro_sign
 
 
@@ -88,14 +88,12 @@ def zodiac_sign_chinese(y):
     else:
         zodiac_num = (diff % 12)
         return zodiac_num
-        
-main_loop = True
-while main_loop:
 
-    
-    print (
-        """\033[0m
-        
+
+main_loop = True
+while main_loop:    
+    print(
+        """\033[0m        
                     .___.     .            
                       _/  _  _|* _. _.     
                     ./__.(_)(_]|(_](_.     
@@ -109,8 +107,8 @@ while main_loop:
     )
 
     print("Welcome to Zodiac Calculator!\n\nThis Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.\n\nEnter your name & date of birth below to get started!\n\n")
-    Name=input("Enter Your Name:")
-    print ("Hello",str(Name))
+    Name = input("Enter Your Name:")
+    print("Hello",str(Name))
 
     d = int(input("Enter Day (1 through 31) ::>"))
     m = int(input("Enter the Month (1 through 12) ::>"))
@@ -124,11 +122,7 @@ while main_loop:
 
     df_chinese = pd.DataFrame({"Zodiac Sign": wks_chinese.row_values(1), "Qualities": wks_chinese.row_values(2), "Horoscope": wks_chinese.row_values(3)})
 
-
-
-
     zodiac = zodiac_sign(d, m)
-
 
     if zodiac:
         
@@ -162,8 +156,7 @@ while main_loop:
 
                     chinese_choice = input("\033[33mWould you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
 
-                    if chinese_choice == 'y' or chinese_choice == 'yes':
-                        
+                    if chinese_choice == 'y' or chinese_choice == 'yes':                        
                         zodiac_df_chinese = df_chinese.iloc[zodiac_sign_chinese(y)]
 
                         zodiac_chinese = zodiac_df_chinese["Zodiac Sign"]
@@ -185,8 +178,7 @@ while main_loop:
                                 print("\033[31mWARNING: Only the word 'end' is accepted! Please try again")
                                 continue
 
-                        break
-                    
+                        break                    
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
@@ -201,6 +193,3 @@ while main_loop:
             else:
                 print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
                 continue
-
-
-
