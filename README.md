@@ -40,3 +40,14 @@ And a final error message when the user doesn’t end the program properly.
 
 <img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695552274/Project%201/Screenshot_2023-09-24_at_11.44.17_AM_law28r.png" width="auto" height="auto" alt="Zodiac calculator end of program error message">
 
+## Future Features
+* It would be a logical idea to expand the program to provide more astrological information based on more calendars beyond just the initial three calendars. 
+
+* Display the elements associated with each zodiac sign (e.g., Fire, Earth,etc…)
+
+* Generate a lucky number associated with each zodiac sign.
+
+* Astrological compatibility checker that lets the user know with with zodiac signs they will get along with well and which zodiac signs they should stay away from.
+
+* Save the astrological information provided through generating a share link or save it in PDF, Word, etc.. file format.
+
