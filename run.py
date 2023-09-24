@@ -100,21 +100,18 @@ while main_loop:
                                            
                  __    .      .    ,       
                 /  ` _.| _.. .| _.-+- _ ._.
-                \__.(_]|(_.(_||(_] | (_)[  
-                                           
+                \__.(_]|(_.(_||(_] | (_)[                                             
 
         """
     )
 
     print("Welcome to Zodiac Calculator!\n\nThis Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.\n\nEnter your name & date of birth below to get started!\n\n")
     Name = input("Enter Your Name:")
-    print("Hello",str(Name))
+    print("Hello", str(Name))
 
     d = int(input("Enter Day (1 through 31) ::>"))
     m = int(input("Enter the Month (1 through 12) ::>"))
     y = int(input("Enter the Year (From 1924 & onwards) ::>"))
-
-
 
     df_western = pd.DataFrame({"Zodiac Sign": wks_western.row_values(1), "Qualities": wks_western.row_values(2), "Horoscope": wks_western.row_values(3)})
 
@@ -124,14 +121,13 @@ while main_loop:
 
     zodiac = zodiac_sign(d, m)
 
-    if zodiac:
-        
+    if zodiac:        
 
-        ### Pandas Filtering
+        # Pandas Filtering
         zodiac_df_western = df_western[df_western["Zodiac Sign"] == zodiac]
         qualities_western = zodiac_df_western["Qualities"].values[0]
         horoscope_western = zodiac_df_western["Horoscope"].values[0]
-        
+
         print(f"\033[32mHey {Name}, your zodiac sign is: {zodiac}.\n\n")
         print(f"\033[32mYour qualties are: {qualities_western}.\n\n")
         print(f"\033[32mYour horoscope is: {horoscope_western}\n\n")
@@ -156,7 +152,7 @@ while main_loop:
 
                     chinese_choice = input("\033[33mWould you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
 
-                    if chinese_choice == 'y' or chinese_choice == 'yes':                        
+                    if chinese_choice == 'y' or chinese_choice == 'yes':        
                         zodiac_df_chinese = df_chinese.iloc[zodiac_sign_chinese(y)]
 
                         zodiac_chinese = zodiac_df_chinese["Zodiac Sign"]
@@ -177,19 +173,15 @@ while main_loop:
                             else:
                                 print("\033[31mWARNING: Only the word 'end' is accepted! Please try again")
                                 continue
-
                         break                    
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
                         print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
                         continue
-
                 break
-            
             elif mayan_choice == 'n' or mayan_choice == "no":
                 break
-
             else:
                 print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
                 continue
