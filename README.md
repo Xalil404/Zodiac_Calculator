@@ -65,7 +65,12 @@ I have manually tested the project through the following methods:
 
 * Provided invalid data to make sure the relevant error messages are being provided.
 
-* Tested the code via the Pep8 to make sure there are no problems. 
+* Tested the code via the [Pep8](https://pep8ci.herokuapp.com/) to make sure there are no critical problems. The only errors provided were due to character length exceeding 80 per line.
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695561473/Project%201/Screenshot_2023-09-24_at_2.16.30_PM_fryedf.png" width="auto" height="auto" alt="Zodiac calculator pip eight errors">
+
+However that is due to the shell which this project is deployed on having that limitation.
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695561515/Project%201/Screenshot_2023-09-24_at_2.16.55_PM_jgyl5g.png" width="auto" height="auto" alt="Code Institute Python shell limitations">
+
 
 ## Deployment
 
