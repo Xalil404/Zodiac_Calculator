@@ -51,3 +51,17 @@ And a final error message when the user doesn’t end the program properly.
 
 * Save the astrological information provided through generating a share link or save it in PDF, Word, etc.. file format.
 
+## Testing
+
+I have manually tested the project through the following methods:
+
+* Responsive testing on various device sizes through Chrome tools of the deployed site on Heroku.
+
+* Browser testing on Firefox, Safari and Chrome of the deployed site on Heroku.
+
+* 36 tests to make sure each Zodiac sign and its associated data is correctly being fetched from Google sheets and displayed in the program.
+
+* Provided invalid data to make sure the relevant error messages are being provided.
+
+* Tested the code via the Pep8 to make sure there are no problems. 
+
