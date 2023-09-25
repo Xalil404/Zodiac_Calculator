@@ -52,29 +52,31 @@ def zodiac_sign(day, month):
 
 def zodiac_sign_mayan(day, month):
     if month == 12:
-        astro_sign = 'ALLIGATOR' if (day < 22) else 'FALCON'
+        astro_sign = 'ALLIGATOR' if (day <= 31) else 'MONKEY'
     elif month == 1:
-        astro_sign = 'FALCON' if (day < 20) else 'JAGUAR'
+        astro_sign = 'MONKEY' if (day <= 31) else 'FALCON'
     elif month == 2:
-        astro_sign = 'JAGUAR' if (day < 19) else 'FOX'
+        astro_sign = 'FALCON' if (day < 8) else 'JAGUAR'
     elif month == 3:
-        astro_sign = 'FOX' if (day < 21) else 'SNAKE'
+        astro_sign = 'JAGUAR' if (day <= 31) else 'FOX'
     elif month == 4:
-        astro_sign = 'SNAKE' if (day < 20) else 'SQUIRREL'
+        astro_sign = 'FOX' if (day < 31) else 'SNAKE'
     elif month == 5:
-        astro_sign = 'SQUIRREL' if (day < 21) else 'TURTLE'
+        astro_sign = 'SNAKE' if (day < 31) else 'SQUIRREL'
     elif month == 6:
-        astro_sign = 'TURTLE' if (day < 21) else 'BAT'
+        astro_sign = 'SQUIRREL' if (day < 27) else 'TURTLE'
+    elif month == 6:
+        astro_sign = 'TURTLE' if (day < 31) else 'BAT'
     elif month == 7:
-        astro_sign = 'BAT' if (day < 23) else 'SCORPION'
+        astro_sign = 'BAT' if (day < 27) else 'SCORPION'
     elif month == 8:
-        astro_sign = 'SCORPION' if (day < 23) else 'DEER'
+        astro_sign = 'SCORPION' if (day < 24) else 'DEER'
     elif month == 9:
-        astro_sign = 'DEER' if (day < 23) else 'OWL'
+        astro_sign = 'DEER' if (day < 21) else 'OWL'
     elif month == 10:
-        astro_sign = 'OWL' if (day < 23) else 'PEACOCK'
+        astro_sign = 'OWL' if (day < 19) else 'PEACOCK'
     elif month == 11:
-        astro_sign = 'PEACOCK' if (day < 22) else 'ALLIGATOR'
+        astro_sign = 'PEACOCK' if (day < 16) else 'ALLIGATOR'
     else:
         print("Error")
     return astro_sign
