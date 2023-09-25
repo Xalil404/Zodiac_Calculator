@@ -83,7 +83,7 @@ def zodiac_sign_mayan(day, month):
 
 
 def zodiac_sign_chinese(y):
-    first_year = 1923
+    first_year = 1924
     diff = y - first_year
     if y < 1924 or y > 2043:
         print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
