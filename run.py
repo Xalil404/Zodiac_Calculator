@@ -107,7 +107,8 @@ while main_loop:
     )
 
     print("Welcome to the Zodiac Calculator!\n")
-    print("This Program Will determine Your Horoscope & Zodiac Signs in the Gregorian, Mayan and Chinese calendars.\n")
+    print("This Program Will determine Your Horoscope & Zodiac Signs in the\n")
+    print("Gregorian, Mayan and Chinese calendars.\n")
     print("Enter your name & date of birth below to get started!\n\n")
     Name = input("Enter Your Name:")
     print("Hello", str(Name))
