@@ -113,7 +113,7 @@ while main_loop:
     d = int(input("Enter Day (1 through 31) ::>"))
     m = int(input("Enter the Month (1 through 12) ::>"))
     y = int(input("Enter the Year (From 1924 & onwards) ::>"))
-    
+
     if y < 1924 or y > 2043:
         print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
         continue
