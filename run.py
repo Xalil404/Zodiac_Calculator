@@ -101,7 +101,7 @@ while main_loop:
                     ./__.(_)(_]|(_](_.
                  __    .      .    ,
                 /  ` _.| _.. .| _.-+- _ ._.
-                \__.(_]|(_.(_||(_] | (_)[
+               \\__.(_]|(_.(_||(_] | (_)[
 
         """
     )
@@ -207,11 +207,13 @@ while main_loop:
                     elif chinese_choice == 'n' or chinese_choice == 'no':
                         break
                     else:
-                        print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
+                        print("\033[31mWARNING: Only Y or N or yes or no are"
+                              " accepted. Please try again!")
                         continue
                 break
             elif mayan_choice == 'n' or mayan_choice == "no":
                 break
             else:
-                print("\033[31mWARNING: Only Y or N or yes or no are accepted. Please try again!")
+                print("\033[31mWARNING: Only Y or N or yes or no are"
+                      " accepted. Please try again!")
                 continue
