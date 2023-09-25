@@ -17,7 +17,7 @@ Prior to initiating the development, a UML diagram was created to understand the
 ## Features
 Upon the program starting, the welcome screen displays the program name and instruction texts on what the program does and how to use it, with the first step being for the user to enter their name for personalised statements in the program.
 
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695551513/Project%201/Screenshot_2023-09-24_at_11.31.25_AM_ylwsvw.png" width="auto" height="auto" alt="image of the Zodiac calculator start screen">
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695650856/Project%201/Screenshot_2023-09-25_at_3.06.38_PM_ulnete.png" width="auto" height="auto" alt="image of the Zodiac calculator start screen">
 
 After the user has entered their name, they are asked to provide 3 more pieces of data:
 * Day of birth
@@ -30,9 +30,13 @@ Once the user has been provided with the initial 3 pieces of information (Zodiac
 
 <img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695551833/Project%201/Screenshot_2023-09-24_at_11.36.27_AM_mswoy2.png" width="auto" height="auto" alt="image of the the Zodiac calculator output">
 
-Errors; the program has three error messages.  An error message when the user enters the wrong date of birth.
+Errors; the program has four error messages.  An error message when the user enters the wrong day or month.
 
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695552068/Project%201/Screenshot_2023-09-24_at_11.40.44_AM_qqmmun.png" width="auto" height="auto" alt="Zodiac calculator DOB error message">
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695650989/Project%201/Screenshot_2023-09-25_at_3.09.33_PM_wutf22.png" width="auto" height="auto" alt="Zodiac calculator DOB error message">
+
+An error message when the user enters the wrong year.
+
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695651081/Project%201/Screenshot_2023-09-25_at_3.11.08_PM_kiel1p.png" width="auto" height="auto" alt="Zodiac calculator DOB error message">
 
 An error message when the user doesn’t provide the correct values to generate more astrological information.
 
@@ -66,7 +70,7 @@ I have manually tested the project through the following methods:
 * Provided invalid data to make sure the relevant error messages are being provided.
 
 * Tested the code via the [Pep8](https://pep8ci.herokuapp.com/) to make sure there are no critical problems. The only errors provided were due to character length exceeding 80 per line.
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695561473/Project%201/Screenshot_2023-09-24_at_2.16.30_PM_fryedf.png" width="auto" height="auto" alt="Zodiac calculator pip eight errors">
+<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695651205/Project%201/Screenshot_2023-09-25_at_3.13.07_PM_mgvvvy.png" width="auto" height="auto" alt="Zodiac calculator pip eight errors">
 
 However that is due to the shell which this project is deployed on having that limitation.
 <img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695561515/Project%201/Screenshot_2023-09-24_at_2.16.55_PM_jgyl5g.png" width="auto" height="auto" alt="Code Institute Python shell limitations">
