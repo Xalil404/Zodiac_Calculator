@@ -156,17 +156,24 @@ while main_loop:
                 # mayan logic
                 zodiac_mayan = zodiac_sign_mayan(d, m)
 
-                zodiac_df_mayan = df_mayan[df_mayan["Zodiac Sign"] == zodiac_mayan]
+                zodiac_df_mayan = df_mayan[
+                    df_mayan["Zodiac Sign"] == zodiac_mayan]
                 qualities_mayan = zodiac_df_mayan["Qualities"].values[0]
                 horoscope_mayan = zodiac_df_mayan["Horoscope"].values[0]
 
-                print(f"\033[32m{Name}, your Mayan zodiac sign is: {zodiac_mayan}.\n\n")
+                print(
+                    f"\033[32m{Name}, your Mayan zodiac sign is: "
+                    f"{zodiac_mayan}.\n\n")
                 print(f"\033[32mYour qualties are: {qualities_mayan}.\n\n")
-                print(f"\033[32mYour Mayan horoscope is: {horoscope_mayan}.\n\n")
+                print(f"\033[32mYour Mayan horoscope is: "
+                      f"{horoscope_mayan}.\n\n")
 
                 while True:
 
-                    chinese_choice = input("\033[33mWould you like to receive your Chinese Zodiac sign & horoscope? (y/n)").lower()
+                    chinese_choice = input(
+                                     "\033[33mWould you like to receive your"
+                                     " Chinese Zodiac sign & horoscope?"
+                                     " (y/n)").lower()
 
                     if chinese_choice == 'y' or chinese_choice == 'yes':
                         zodiac_df_chinese = df_chinese.iloc[zodiac_sign_chinese(y)]
