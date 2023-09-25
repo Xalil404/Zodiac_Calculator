@@ -121,11 +121,24 @@ while main_loop:
         print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
         continue
 
-    df_western = pd.DataFrame({"Zodiac Sign": wks_western.row_values(1), "Qualities": wks_western.row_values(2), "Horoscope": wks_western.row_values(3)})
+    df_western = pd.DataFrame({
+    "Zodiac Sign": wks_western.row_values(1),
+    "Qualities": wks_western.row_values(2),
+    "Horoscope": wks_western.row_values(3)
+    })
 
-    df_mayan = pd.DataFrame({"Zodiac Sign": wks_mayan.row_values(1), "Qualities": wks_mayan.row_values(2), "Horoscope": wks_mayan.row_values(3)})
+    df_mayan = pd.DataFrame({
+    "Zodiac Sign": wks_mayan.row_values(1),
+    "Qualities": wks_mayan.row_values(2),
+    "Horoscope": wks_mayan.row_values(3)
+    })
 
-    df_chinese = pd.DataFrame({"Zodiac Sign": wks_chinese.row_values(1), "Qualities": wks_chinese.row_values(2), "Horoscope": wks_chinese.row_values(3)})
+    df_chinese = pd.DataFrame({
+    "Zodiac Sign": wks_chinese.row_values(1),
+    "Qualities": wks_chinese.row_values(2),
+    "Horoscope": wks_chinese.row_values(3)
+    })
+
 
     zodiac = zodiac_sign(d, m)
 
