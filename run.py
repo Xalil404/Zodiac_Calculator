@@ -148,7 +148,9 @@ while main_loop:
 
         while True:
 
-            mayan_choice = input("\033[33mWould you like to receive your Mayan Zodiac sign & horoscope? (y/n)").lower()
+            mayan_choice = input(
+                           "\033[33mWould you like to receive your Mayan"
+                           " Zodiac sign & horoscope? (y/n)").lower()
 
             if mayan_choice == 'y' or mayan_choice == 'yes':
                 # mayan logic
