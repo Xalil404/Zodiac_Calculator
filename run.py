@@ -176,19 +176,25 @@ while main_loop:
                                      " (y/n)").lower()
 
                     if chinese_choice == 'y' or chinese_choice == 'yes':
-                        zodiac_df_chinese = df_chinese.iloc[zodiac_sign_chinese(y)]
+                        zodiac_df_chinese = df_chinese.\
+                            iloc[zodiac_sign_chinese(y)]
 
                         zodiac_chinese = zodiac_df_chinese["Zodiac Sign"]
                         qualities_chinese = zodiac_df_chinese["Qualities"]
                         horoscope_chinese = zodiac_df_chinese["Horoscope"]
 
-                        print(f"\033[32m{Name}, your Chinese zodiac sign is: {zodiac_chinese}.\n\n")
-                        print(f"\033[32mYour qualties are: {qualities_chinese}.\n\n")
-                        print(f"\033[32mYour Chinese horoscope is: {horoscope_chinese}.\n\n")
+                        print(f"\033[32m{Name}, your Chinese zodiac sign is: "
+                              f"{zodiac_chinese}.\n\n")
+                        print(f"\033[32mYour qualties are: "
+                              f"{qualities_chinese}.\n\n")
+                        print(f"\033[32mYour Chinese horoscope is: "
+                              f"{horoscope_chinese}.\n\n")
 
                         while True:
 
-                            continue_choice = input("\033[33mEnter 'end' to end the program: ").lower()
+                            continue_choice = input(
+                                              "\033[33mEnter 'end' to"
+                                              " end the program: ").lower()
 
                             if continue_choice == 'end':
                                 main_loop = True
