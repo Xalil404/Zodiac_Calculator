@@ -200,7 +200,8 @@ while main_loop:
                                 main_loop = True
                                 break
                             else:
-                                print("\033[31mWARNING: Only the word 'end' is accepted! Please try again")
+                                print("\033[31mWARNING: Only the word 'end' is"
+                                      " accepted! Please try again")
                                 continue
                         break
                     elif chinese_choice == 'n' or chinese_choice == 'no':
