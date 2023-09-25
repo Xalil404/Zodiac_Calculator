@@ -45,7 +45,7 @@ def zodiac_sign(day, month):
     elif month == 11:
         astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
     else:
-        print("\033[31mWARNING: Only Months 1 through 12 & days 1 through 31 are accepted")
+        print("\033[31mWARNING: Only Months 1-12 & days 1-31 are accepted")
         return None
     return astro_sign
 
@@ -78,7 +78,7 @@ def zodiac_sign_mayan(day, month):
     elif month == 11:
         astro_sign = 'PEACOCK' if (day < 16) else 'ALLIGATOR'
     else:
-        print("\033[31mWARNING: Only Months 1 through 12 & days 1 through 31 are accepted")
+        print("\033[31mWARNING: Only Months 1-12 & days 1-31 are accepted")
     return astro_sign
 
 
