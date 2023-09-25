@@ -45,7 +45,7 @@ def zodiac_sign(day, month):
     elif month == 11:
         astro_sign = 'Scorpio' if (day < 22) else 'Sagittarius'
     else:
-        print("\033[31mWARNING: Only Months 1 through 12, days 1 through 31 & Years after 1924 are accepted")
+        print("\033[31mWARNING: Only Months 1 through 12 & days 1 through 31 are accepted")
         return None
     return astro_sign
 
@@ -78,7 +78,7 @@ def zodiac_sign_mayan(day, month):
     elif month == 11:
         astro_sign = 'PEACOCK' if (day < 16) else 'ALLIGATOR'
     else:
-        print("Error")
+        print("\033[31mWARNING: Only Months 1 through 12 & days 1 through 31 are accepted")
     return astro_sign
 
 
@@ -86,7 +86,7 @@ def zodiac_sign_chinese(y):
     first_year = 1923
     diff = y - first_year
     if y < 1924 or y > 2043:
-        print("The time frame doesn't fit.")
+        print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
     else:
         zodiac_num = (diff % 12)
         return zodiac_num
@@ -113,6 +113,10 @@ while main_loop:
     d = int(input("Enter Day (1 through 31) ::>"))
     m = int(input("Enter the Month (1 through 12) ::>"))
     y = int(input("Enter the Year (From 1924 & onwards) ::>"))
+    
+    if y < 1924 or y > 2043:
+        print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
+        continue
 
     df_western = pd.DataFrame({"Zodiac Sign": wks_western.row_values(1), "Qualities": wks_western.row_values(2), "Horoscope": wks_western.row_values(3)})
 
