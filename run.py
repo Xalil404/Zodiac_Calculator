@@ -19,6 +19,7 @@ wks_mayan = SHEET.worksheet('mayan')
 wks_chinese = SHEET.worksheet('chinese')
 
 
+# Logic to calculate Gregorian Zodiac sign
 def zodiac_sign(day, month):
     if month == 12:
         astro_sign = 'Sagittarius' if (day < 22) else 'Capricorn'
@@ -50,6 +51,7 @@ def zodiac_sign(day, month):
     return astro_sign
 
 
+# Logic to calculate Mayan Zodiac sign
 def zodiac_sign_mayan(day, month):
     if month == 12:
         astro_sign = 'ALLIGATOR' if (day <= 31) else 'MONKEY'
@@ -82,6 +84,7 @@ def zodiac_sign_mayan(day, month):
     return astro_sign
 
 
+# Logic to calculate Chinese Zodiac sign
 def zodiac_sign_chinese(y):
     first_year = 1924
     diff = y - first_year
@@ -92,6 +95,7 @@ def zodiac_sign_chinese(y):
         return zodiac_num
 
 
+# Loop to restart program
 main_loop = True
 while main_loop:
     print(
@@ -110,16 +114,32 @@ while main_loop:
     print("This Program Will determine Your Horoscope & Zodiac Signs in the\n")
     print("Gregorian, Mayan and Chinese calendars.\n")
     print("Enter your name & date of birth below to get started!\n\n")
-    Name = input("Enter Your Name:")
-    print("Hello", str(Name))
 
-    d = int(input("Enter Day (1 through 31) ::>"))
-    m = int(input("Enter the Month (1 through 12) ::>"))
-    y = int(input("Enter the Year (From 1924 & onwards) ::>"))
+    while True:
+        Name = input("\033[37mEnter Your Name: ")
+        if Name.strip():  
+            print("\033[37mHello", Name)
+            break  
+        else:
+            print("\033[31mError: Please enter a valid name.")
 
-    if y < 1924 or y > 2043:
-        print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
-        continue
+    while True:
+        try:
+            d = int(input("\033[37mEnter Day (1 through 31) ::> "))
+            m = int(input("\033[37mEnter the Month (1 through 12) ::> "))
+            y = int(input("\033[37mEnter the Year (From 1924 & onwards) ::> "))
+
+            if y < 1924 or y > 2043:
+                print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
+            elif m < 1 or m > 12:
+                print("\033[31mWARNING: Month should be between 1 and 12")
+            elif d < 1 or d > 31:
+                print("\033[31mWARNING: Day should be between 1 and 31")
+            else:
+                break  
+        except ValueError:
+            print("\033[31mERROR: Please enter a valid integer for day, month, and year.")
+
 
     df_western = pd.DataFrame({"Zodiac Sign": wks_western.row_values(1),
                                "Qualities": wks_western.row_values(2),
