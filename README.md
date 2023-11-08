@@ -30,23 +30,8 @@ Once the user has been provided with the initial 3 pieces of information (their 
 
 <img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695551833/Project%201/Screenshot_2023-09-24_at_11.36.27_AM_mswoy2.png" width="auto" height="auto" alt="image of the the Zodiac calculator output">
 
-* Errors; the program has four error messages.  An error message when the user enters the wrong day or month.
-
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695650989/Project%201/Screenshot_2023-09-25_at_3.09.33_PM_wutf22.png" width="auto" height="auto" alt="Zodiac calculator DOB error message">
-
-* An error message when the user enters the wrong year.
-
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695651081/Project%201/Screenshot_2023-09-25_at_3.11.08_PM_kiel1p.png" width="auto" height="auto" alt="Zodiac calculator DOB error message">
-
-* An error message when the user doesn’t provide the correct values to generate more astrological information.
-
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695552173/Project%201/Screenshot_2023-09-24_at_11.42.40_AM_dnx6sd.png" width="auto" height="auto" alt="Zodiac calculator question error message">
-
-* And a final error message when the user doesn’t end the program properly.
-
-<img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695552274/Project%201/Screenshot_2023-09-24_at_11.44.17_AM_law28r.png" width="auto" height="auto" alt="Zodiac calculator end of program error message">
-
 ## Future Features
+
 * It would be a logical idea to expand the program to provide more astrological information based on more calendars beyond just the initial three calendars. 
 
 * Display the elements associated with each zodiac sign (i.e. Fire, Earth,etc…)
@@ -57,7 +42,7 @@ Once the user has been provided with the initial 3 pieces of information (their 
 
 * Save the astrological information provided through generating a share link or save it in a PDF, Word, etc.. file format for future reference or sharing.
 
-## Testing
+## General Testing
 
 I have manually tested the project through the following methods:
 
@@ -71,6 +56,34 @@ I have manually tested the project through the following methods:
 
 * Tested the code via the [Pep8](https://pep8ci.herokuapp.com/) to make sure there are no critical problems. 
 <img src="https://res.cloudinary.com/dugcwv1mf/image/upload/v1695655465/Project%201/Screenshot_2023-09-25_at_4.22.34_PM_wfuega.png" width="auto" height="auto" alt="Zodiac calculator pip eight errors">
+
+## Features Testing
+
+| User Story | Screenshot | Notes |
+| --- | --- | --- |
+| User can enter date of birth information to generate zodiac signs and horoscopes. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699444857/Project%204/Screenshot_2023-11-08_at_12.00.34_PM_lj83nd.png) | Works as expected |
+| User can generate Gregorian zodiac sign and horoscope. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699444907/Project%204/Screenshot_2023-11-08_at_12.01.25_PM_jttqdy.png) | Works as expected |
+| User can continue on to generate Mayan zodiac sign and horoscope. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699444953/Project%204/Screenshot_2023-11-08_at_12.02.15_PM_uwjzxc.png) | Works as expected |
+| User can continue on to generate Chinese zodiac sign and horoscope. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699444994/Project%204/Screenshot_2023-11-08_at_12.02.55_PM_dzjhvm.png) | Works as expected |
+| User can end program midway and restart it. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445126/Project%204/Screenshot_2023-11-08_at_12.05.07_PM_uglyp6.png) | Works as expected |
+| User can end program at the end and restart it. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445069/Project%204/Screenshot_2023-11-08_at_12.04.12_PM_sv6t2n.png) | Works as expected |
+
+## Error Handling Testing
+
+| Edge Case | Screenshot | Notes |
+| --- | --- | --- |
+| User cannot proceed without entering a name. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445196/Project%204/Screenshot_2023-11-08_at_12.06.16_PM_sxmaej.png) | Works as expected |
+| Day entered must have a value; cannot be empty. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445245/Project%204/Screenshot_2023-11-08_at_12.07.07_PM_kf3efi.png) | Works as expected |
+| Day entered has to be within the specified range. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445368/Project%204/Screenshot_2023-11-08_at_12.09.06_PM_gzfurq.png) | Works as expected |
+| Day entered must be an integer; cannot be a letter. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445306/Project%204/Screenshot_2023-11-08_at_12.08.06_PM_vvijsg.png) | Works as expected |
+| Month entered must have a value; cannot be empty. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445426/Project%204/Screenshot_2023-11-08_at_12.10.04_PM_qfrgmm.png) | Works as expected |
+| Month entered has to be within the specified range. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445564/Project%204/Screenshot_2023-11-08_at_12.12.26_PM_oqn8pz.png) | Works as expected |
+| Month entered must be an integer; cannot be a letter. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445505/Project%204/Screenshot_2023-11-08_at_12.11.26_PM_qgjvtv.png) | Works as expected |
+| Year entered must have a value; cannot be empty. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445623/Project%204/Screenshot_2023-11-08_at_12.13.25_PM_g7agey.png) | Works as expected |
+| Year entered has to be within the specified range. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445725/Project%204/Screenshot_2023-11-08_at_12.15.07_PM_wmpfqf.png) | Works as expected |
+| Year entered must be an integer; cannot be a letter. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445817/Project%204/Screenshot_2023-11-08_at_12.16.39_PM_escjtz.png) | Works as expected |
+| Only y, n , yes or no are acceptable commands to continue program. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699445938/Project%204/Screenshot_2023-11-08_at_12.18.36_PM_fmkbnw.png) | Works as expected |
+| Only end is acceptable command to end program. | ![screenshot](https://res.cloudinary.com/dugcwv1mf/image/upload/v1699446008/Project%204/Screenshot_2023-11-08_at_12.19.49_PM_hl0bnf.png) | Works as expected |
 
 ## Deployment
 
@@ -101,5 +114,7 @@ In order to deploy the project on Heroku, the following steps were taken:
 * For code and syntax references: Code Academy python materials/lessons, Python documentation on the internet and the Love Sandwiches practice project.
 
 * Google APIs for Gdrive & Google sheets to communicate with the Google sheet document.
+
+* [Pandas](https://pandas.pydata.org/) Library for reading and handling Zodiac data stored in Google Sheets.
 
 * Many project tutorials on the web of similar projects.
