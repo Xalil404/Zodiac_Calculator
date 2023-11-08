@@ -117,9 +117,9 @@ while main_loop:
 
     while True:
         Name = input("\033[37mEnter Your Name: ")
-        if Name.strip():  
+        if Name.strip():
             print("\033[37mHello", Name)
-            break  
+            break
         else:
             print("\033[31mError: Please enter a valid name.")
 
@@ -130,16 +130,17 @@ while main_loop:
             y = int(input("\033[37mEnter the Year (From 1924 & onwards) ::> "))
 
             if y < 1924 or y > 2043:
-                print("\033[31mWARNING: Only Years from 1924 till 2043 are accepted")
+                print("\033[31mWARNING: Only Years from "
+                      "1924 till 2043 are accepted")
             elif m < 1 or m > 12:
                 print("\033[31mWARNING: Month should be between 1 and 12")
             elif d < 1 or d > 31:
                 print("\033[31mWARNING: Day should be between 1 and 31")
             else:
-                break  
+                break
         except ValueError:
-            print("\033[31mERROR: Please enter a valid integer for day, month, and year.")
-
+            print("\033[31mERROR: Please enter a "
+                  "valid integer for day, month, and year.")
 
     df_western = pd.DataFrame({"Zodiac Sign": wks_western.row_values(1),
                                "Qualities": wks_western.row_values(2),
